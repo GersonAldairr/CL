@@ -19,36 +19,22 @@
         <h2 class="screen__title">Bienvenido</h2>
         <p>Ingresa con tu usuario para reportar incidencias en San Miguel.</p>
 
-        <!-- OPCIÓN 1: Login como formulario (hay que llenar los campos) -->
+        <!-- Login "de mentira": solo navega a la pantalla principal -->
         <form class="form" action="home.html" method="get">
           <label>
             Correo electrónico
-            <input type="email" name="email"
-                   placeholder="tucorreo@ejemplo.com" />
+            <input type="email" placeholder="tucorreo@ejemplo.com" required />
           </label>
 
           <label>
             Contraseña
-            <input type="password" name="password"
-                   placeholder="********" />
+            <input type="password" placeholder="********" required />
           </label>
 
-          <!-- IMPORTANTE: type="submit" -->
-          <button type="submit" class="btn btn--primary">
-            Iniciar sesión
-          </button>
+          <button type="submit" class="btn btn--primary">Ingresar</button>
         </form>
-
-        <!-- OPCIÓN 2 (si solo es prototipo y no quieres validar nada):
-             un botón que siempre navega -->
-        <!--
-        <a href="home.html" class="btn btn--primary" style="margin-top:12px;">
-          Iniciar sesión (demo)
-        </a>
-        -->
       </section>
     </main>
   </div>
 </body>
 </html>
-

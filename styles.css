@@ -1,0 +1,332 @@
+/* ================================
+   BASE - APLICACIÓN MÓVIL
+   ================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Roboto", sans-serif;
+  background: #101216; /* Fondo oscuro fuera del móvil */
+  color: #1f2933;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* ================================
+   CONTENEDOR DEL CELULAR
+   ================================ */
+
+.app-phone {
+  background: #f3f4f6; /* fondo interno claro */
+  width: 100%;
+  max-width: 390px; /* ancho tipo iPhone */
+  height: 800px; /* alto de la pantalla móvil */
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================================
+   CABECERA
+   ================================ */
+
+.app-header {
+  background: #0b63ce; /* azul principal */
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  flex-shrink: 0;
+  height: 60px;
+}
+
+.app-header__title {
+  flex: 1;
+  margin: 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Botón de volver (←) */
+.back-btn {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 22px;
+  padding: 4px 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Icono de perfil en la cabecera */
+.header-icon {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 4px 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Para pantallas donde no hay icono a la izquierda/derecha */
+.app-header__spacer {
+  width: 32px;
+}
+
+/* ================================
+   CONTENIDO PRINCIPAL
+   ================================ */
+
+.app-main {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto; /* scroll interno solo si hace falta */
+  background: #f3f4f6;
+}
+
+.screen {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
+}
+
+.screen__title {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* ================================
+   TIPOGRAFÍA Y TEXTOS
+   ================================ */
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 16px 0 10px;
+}
+
+/* ================================
+   BOTONES
+   ================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.btn--primary {
+  background: #0b63ce;
+  color: #ffffff;
+  width: 100%;
+}
+
+.btn--secondary {
+  background: #e5e7eb;
+  color: #111827;
+  width: 100%;
+}
+
+/* ================================
+   TARJETAS DE REPORTE
+   ================================ */
+
+.report-card {
+  display: block; /* funciona para <article> y <a> */
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border: 1px solid #e5e7eb;
+  text-decoration: none;
+  color: #111827;
+}
+
+.report-card h4 {
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ================================
+   BADGES DE ESTADO
+   ================================ */
+
+.badge {
+  display: inline-flex;
+  padding: 2px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 999px;
+  color: #ffffff;
+}
+
+.badge--pending {
+  background: #f97316;
+}
+
+.badge--resolved {
+  background: #16a34a;
+}
+
+.badge--in-progress {
+  background: #0ea5e9;
+}
+
+/* ================================
+   FORMULARIOS (login, reporte, perfil)
+   ================================ */
+
+.form,
+.report-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.form label,
+.report-form label {
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form input,
+.report-form select,
+.report-form textarea,
+.report-form input[type="text"] {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+}
+
+.form input:focus,
+.report-form select:focus,
+.report-form textarea:focus,
+.report-form input[type="text"]:focus {
+  border-color: #0b63ce;
+  background: #ffffff;
+  box-shadow: 0 0 0 2px rgba(11, 99, 206, 0.15);
+}
+
+.report-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+/* ================================
+   NÚMEROS DE LA MUNICIPALIDAD
+   ================================ */
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  text-decoration: none;
+  color: #111827;
+}
+
+.contact-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.contact-phone {
+  font-size: 13px;
+  color: #2563eb;
+}
+
+/* ================================
+   PERFIL
+   ================================ */
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.profile-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 999px;
+  background: #0b63ce;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.profile-name {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.profile-email {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.profile-info {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+/* ================================
+   ENLACES
+   ================================ */
+
+a {
+  color: inherit;
+}
+

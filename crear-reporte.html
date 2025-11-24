@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Limpia San Miguel – Crear reporte</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-phone">
+    <header class="app-header">
+      <a href="index.html" class="back-btn">←</a>
+      <h1 class="app-header__title">Crear reporte</h1>
+    </header>
+
+    <main class="app-main">
+      <section class="screen">
+        <h2 class="screen__title">Nuevo reporte</h2>
+
+        <form class="report-form">
+          <label>Tipo de problema
+            <select>
+              <option>Basura acumulada</option>
+              <option>Contenedor lleno</option>
+              <option>Escombros</option>
+              <option>Reciclaje</option>
+            </select>
+          </label>
+
+          <label>Descripción
+            <textarea placeholder="Describe el problema"></textarea>
+          </label>
+
+          <label>Dirección o referencia
+            <input type="text" placeholder="Ej: Jr. Los Cedros cuadra 3" />
+          </label>
+
+          <a href="mis-reportes.html" class="btn btn--primary">Enviar reporte</a>
+        </form>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
