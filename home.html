@@ -3,36 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Limpia San Miguel | Iniciar sesión</title>
+  <title>Limpia San Miguel | Inicio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="app-phone">
     <header class="app-header">
       <span class="app-header__spacer"></span>
-      <h1 class="app-header__title">Iniciar sesión</h1>
-      <span class="app-header__spacer"></span>
+      <h1 class="app-header__title">Limpia San Miguel</h1>
+      <a href="perfil.html" class="header-icon">👤</a>
     </header>
 
     <main class="app-main">
       <section class="screen">
-        <h2 class="screen__title">Bienvenido</h2>
-        <p>Ingresa con tu usuario para reportar incidencias en San Miguel.</p>
+        <h2 class="screen__title">Inicio</h2>
 
-        <!-- Login "de mentira": solo navega a la pantalla principal -->
-        <form class="form" action="home.html" method="get">
-          <label>
-            Correo electrónico
-            <input type="email" placeholder="tucorreo@ejemplo.com" required />
-          </label>
+        <a href="crear-reporte.html" class="btn btn--primary">Crear reporte</a>
+        <a href="mis-reportes.html" class="btn btn--secondary">Mis reportes</a>
 
-          <label>
-            Contraseña
-            <input type="password" placeholder="********" required />
-          </label>
+        <h3 class="section-title">Números de la municipalidad</h3>
+        <div class="contact-list">
+          <a href="tel:+5111234567" class="contact-card">
+            <div class="contact-name">Limpieza pública</div>
+            <div class="contact-phone">01 123 4567</div>
+          </a>
+          <a href="tel:+5117654321" class="contact-card">
+            <div class="contact-name">Serenazgo</div>
+            <div class="contact-phone">01 765 4321</div>
+          </a>
+          <a href="tel:+5115550000" class="contact-card">
+            <div class="contact-name">Central municipal</div>
+            <div class="contact-phone">01 555 0000</div>
+          </a>
+        </div>
 
-          <button type="submit" class="btn btn--primary">Ingresar</button>
-        </form>
+        <h3 class="section-title">Reportes recientes</h3>
+
+        <article class="report-card">
+          <h4>Basura en Jr. Los Cedros</h4>
+          <span class="badge badge--pending">Pendiente</span>
+        </article>
+
+        <article class="report-card">
+          <h4>Contenedor lleno en Av. La Mar</h4>
+          <span class="badge badge--resolved">Resuelto</span>
+        </article>
       </section>
     </main>
   </div>
